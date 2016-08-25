@@ -17,7 +17,7 @@ var PickerBox = React.createClass({
     return (
     	<div>
        <select id="mood-choices" onChange={this.handleChange} style={pickerStyles}>
-        <option selected disabled value=" ">
+        <option selected value=" ">
         </option>    
         <option value="happy">
           happy!

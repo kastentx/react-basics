@@ -8,8 +8,8 @@ var Greeting = React.createClass({
   },
   render: function() {
 	 	var h1Styles = {
-			'color': 'green'
-		};
+	 		'color': this.props.color
+	 	};
 		 	
     return (
     	<h1 style={h1Styles}>Hello {this.props.name}!</h1>
