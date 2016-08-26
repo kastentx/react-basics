@@ -10,7 +10,7 @@ var App = React.createClass({
     };
 	},
 
-	changeColor: function(newMood) {
+	handleChange: function(newMood) {
     var newColor;
     switch(newMood) {
       case 'happy!':
@@ -36,7 +36,7 @@ var App = React.createClass({
     return (
       <div>
       	<Greeting color={this.state.color} />
-      	<MoodStatement onChange={this.changeColor} mood={this.state.mood}/>
+      	<MoodStatement onChange={this.handleChange} mood={this.state.mood}/>
     	</div>
     );
   }
