@@ -4,25 +4,31 @@ var MoodStatement = require('./MoodStatement');
 
 var App = React.createClass({
 	getInitialState: function() {
-		return {color: 'black'};
+		return {
+      color: 'black',
+      mood: ' ' 
+    };
 	},
 
-	setGreetColor: function(mood) {
+	changeColor: function(newMood) {
     var newColor;
-
-    switch(mood) {
-      case 'happy':
+    switch(newMood) {
+      case 'happy!':
         newColor = 'green';
         break;
-      case 'angry':
+      case 'angry!':
         newColor = 'red';
         break;
-      case 'excited':
+      case 'excited!':
         newColor = 'yellow';
+        break;
+      case ' ':
+        newColor = 'black';
         break;
     }
 		this.setState({
-			color: newColor
+			color: newColor,
+      mood: newMood
 		});
 	},
 
@@ -30,7 +36,7 @@ var App = React.createClass({
     return (
       <div>
       	<Greeting color={this.state.color} />
-      	<MoodStatement onChange={this.setGreetColor}/>
+      	<MoodStatement onChange={this.changeColor} mood={this.state.mood}/>
     	</div>
     );
   }

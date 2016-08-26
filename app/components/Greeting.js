@@ -4,8 +4,10 @@ var Greeting = React.createClass({
   getDefaultProps: function() {
     return { 
     	name: 'World',
+      color: 'black'
     };
   },
+  
   render: function() {
 	 	var h1Styles = {
 	 		'color': this.props.color
