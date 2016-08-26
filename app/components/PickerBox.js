@@ -19,9 +19,9 @@ var PickerBox = React.createClass({
       'margin-left': '.5em',
       'margin-top': '2em'
     };
-    
+
     return (
-    	<div>
+      <div>
         <select id='mood-choices' onChange={this.handleChange} style={pickerStyles} value={this.props.mood}>
             <option value=' '>
             </option>    
